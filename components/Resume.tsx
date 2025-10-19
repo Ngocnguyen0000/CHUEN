@@ -113,7 +113,7 @@ export const Resume: React.FC = () => {
                     <div className="mt-6 md:mt-0 text-sm space-y-3 text-gray-400 flex flex-col items-start md:items-end">
                         <div className="space-y-2">
                             <p className="flex items-center gap-2 md:justify-end w-full"><PhoneIcon className="w-4 h-4 text-[#F9A826]" /> 09xxxxxxx</p>
-                            <p className="flex items-center gap-2 md:justify-end w-full"><LocationIcon className="w-4 h-4 text-[#F9A826]" /> Ngu Hanh Son District, Da Nang</p>
+                            <p className="flex items-center gap-2 md:justify-end w-full"><LocationIcon className="w-4 h-4 text-[#F9A826]" />Da Nang</p>
                             <p className="flex items-center gap-2 md:justify-end w-full"><EmailIcon className="w-4 h-4 text-[#F9A826]" /> nguyenguyen000001@gmail.com</p>
                         </div>
                         <a 
