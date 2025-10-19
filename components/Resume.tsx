@@ -80,7 +80,7 @@ export const Resume: React.FC = () => {
                 <div className="flex flex-col md:flex-row justify-between items-start mb-12">
                     <div className="flex items-center gap-6">
                         <img 
-                            src="./asset/image.png" 
+                            src="/asset/image.png" 
                             alt="Ngoc Nguyen" 
                             className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-[#F9A826]/60 shadow-lg shadow-[#F9A826]/10"
                         />
@@ -117,7 +117,7 @@ export const Resume: React.FC = () => {
                             <p className="flex items-center gap-2 md:justify-end w-full"><EmailIcon className="w-4 h-4 text-[#F9A826]" /> nguyenguyen000001@gmail.com</p>
                         </div>
                         <a 
-                            href="./asset/resume/UXUI Designer.pdf" 
+                            href="/asset/resume/UXUI Designer.pdf" 
                             download="Bich_Ngoc_Resume.pdf"
                             className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-[#F9A826] text-black font-bold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#F9A826]/20 hover:scale-105 text-sm"
                         >

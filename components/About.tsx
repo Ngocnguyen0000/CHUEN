@@ -17,7 +17,7 @@ export const About: React.FC = () => {
             <div className="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
                 <div className="absolute inset-0 bg-[#F9A826] rounded-full blur-3xl opacity-30"></div>
                 <img 
-                    src="./asset/image.png" 
+                    src="/asset/image.png" 
                     alt="Bich Ngoc" 
                     className="relative w-full h-full object-cover rounded-full border-8 border-[#2d2d2d]"
                 />
