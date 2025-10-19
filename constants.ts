@@ -272,7 +272,7 @@ export const allProjects: Project[] = [
         id: 304,
         title: 'Mobie App | Runzy',
         category: ProjectCategory.UX_UI_DESIGN,
-        imageUrl: '/asset/uxui_design/304.png',
+        imageUrl: '/asset/uxui_design/304.PNG',
         projectUrl:
             'https://www.behance.net/gallery/236869453/Mobie-App-Runzy',
         gallery: ['/asset/uxui_design/304.1.png'],
