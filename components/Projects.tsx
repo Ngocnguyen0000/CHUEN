@@ -10,21 +10,17 @@ const categories = [
 ];
 
 const ProjectCard: React.FC<{ project: Project, onProjectClick: (project: Project) => void }> = ({ project, onProjectClick }) => (
-    <div className="group break-inside-avoid mb-6 cursor-pointer" onClick={() => onProjectClick(project)}>
-        <div className="overflow-hidden rounded-lg mb-4">
-            <div>
-                <img 
-                    src={project.imageUrl} 
-                    alt={project.title} 
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
-                />
-            </div>
-        </div>
-        <h3 className="text-base font-semibold text-white mt-1 text-center">
-            <span className="hover:text-[#F9A826] transition-colors underline decoration-transparent group-hover:decoration-current">
+    <div className="group relative break-inside-avoid cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl hover:shadow-[#F9A826]/10 transition-all duration-300" onClick={() => onProjectClick(project)}>
+        <img 
+            src={project.imageUrl} 
+            alt={project.title} 
+            className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+             <h3 className="text-base font-semibold text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                 {project.title}
-            </span>
-        </h3>
+            </h3>
+        </div>
     </div>
 );
 
@@ -35,7 +31,6 @@ interface ProjectsProps {
 export const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
     const [activeTab, setActiveTab] = useState<ProjectCategory | 'ALL'>('ALL');
 
-    // Lọc project theo tab, 'ALL' hiển thị tất cả
     const filteredProjects = activeTab === 'ALL'
         ? allProjects
         : allProjects.filter(p => p.category === activeTab);
@@ -44,8 +39,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
         <section className="py-20">
             <h2 className="text-5xl font-bold uppercase tracking-wider mb-12">Projects</h2>
 
-            {/* Tabs lọc */}
-            <div className="flex items-center space-x-8 border-b border-gray-700 mb-8">
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 border-b border-gray-700 mb-8">
                 <button
                     onClick={() => setActiveTab('ALL')}
                     className={`py-3 text-sm font-semibold uppercase tracking-wider transition-colors duration-300 ${activeTab === 'ALL' ? 'text-[#F9A826] border-b-2 border-[#F9A826]' : 'text-gray-400 hover:text-white'}`}
@@ -63,8 +57,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
                 ))}
             </div>
 
-            {/* Grid project */}
-            <div className="columns-2 md:columns-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredProjects.map(project => (
                     <ProjectCard key={project.id} project={project} onProjectClick={onProjectClick} />
                 ))}
