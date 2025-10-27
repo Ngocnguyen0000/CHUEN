@@ -19,7 +19,7 @@ export const About: React.FC = () => {
         { Icon: LinkedinIcon, href: 'https://www.linkedin.com/in/nguyen-ngoc-b5558b299/' },
         { Icon: GithubIcon, href: 'https://github.com/Ngocnguyen0000' },
         { Icon: BehanceIcon, href: 'https://www.behance.net/ngocnguyen329/projects' },
-        { Icon: FacebookIcon, href: 'https://www.facebook.com/bichngoc.nguyenthi.7161' },
+        { Icon: FacebookIcon, href: 'https://www.facebook.com/2n.Adk02/' },
     ];
 
     return (
